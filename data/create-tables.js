@@ -3,8 +3,10 @@ const pool = require('../lib/utils/pool');
 run();
 
 async function run() {
+    console.log('HERE!')
     try {
-
+        // await pool.connect();
+        console.log(process.env.DATABASE_URL)
         await pool.query(`
             CREATE TABLE votes(
                 id SERIAL PRIMARY KEY,
